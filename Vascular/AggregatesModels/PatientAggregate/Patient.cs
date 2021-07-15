@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace Vascular.AggregatesModels.PatientAggregate
 {
-    public class Patient: Entity<int>, IAggregateRoot
+    public class Patient: Entity<string>, IAggregateRoot
     {
-
+        public string FirstName { get; set; }
+        public string LasttName { get; set; }
+        public string Title { get; set; }
     }
 }
