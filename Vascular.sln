@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vascular", "Vascular\Vascular.csproj", "{3125E1C6-9113-42E9-9263-DE60034F2A01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vascular.WebApi", "Vascular.WebApi\Vascular.WebApi.csproj", "{029D833E-5B68-4B86-A958-23304C307DD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3125E1C6-9113-42E9-9263-DE60034F2A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3125E1C6-9113-42E9-9263-DE60034F2A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3125E1C6-9113-42E9-9263-DE60034F2A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3125E1C6-9113-42E9-9263-DE60034F2A01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{029D833E-5B68-4B86-A958-23304C307DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{029D833E-5B68-4B86-A958-23304C307DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{029D833E-5B68-4B86-A958-23304C307DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{029D833E-5B68-4B86-A958-23304C307DD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F62C339-E911-4687-932C-78F0A5F84A50}
+	EndGlobalSection
+EndGlobal
