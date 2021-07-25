@@ -1,0 +1,9 @@
+
+
+https://www.youtube.com/watch?v=5vS7Iq9vpXE
+
+https://github.com/microsoft/fhir-server
+
+https://github.com/microsoft/fhir-server-samples
+
+https://github.com/synthetichealth/synthea
