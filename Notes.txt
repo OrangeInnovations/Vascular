@@ -12,4 +12,4 @@ Connect-AzAccount -UseDeviceAuthentication
 
 Connect-AzureAd -TenantDomain "mystartinnovations.onmicrosoft.com"
 
-./Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "myfhir-dev" -UsePaaS $false -AdminPassword $(ConvertTo-SecureString -AsPlainText -Force "$Pass149")
+./Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "myfhir-dev" -UsePaaS $false -AdminPassword $(ConvertTo-SecureString "$Pass149" -AsPlainText -Force )
