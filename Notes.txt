@@ -7,3 +7,9 @@ https://github.com/microsoft/fhir-server
 https://github.com/microsoft/fhir-server-samples
 
 https://github.com/synthetichealth/synthea
+
+Connect-AzAccount -UseDeviceAuthentication
+
+Connect-AzureAd -TenantDomain "mystartinnovations.onmicrosoft.com"
+
+./Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "myfhir-dev" -UsePaaS $false -AdminPassword $(ConvertTo-SecureString -AsPlainText -Force "$Pass149")
