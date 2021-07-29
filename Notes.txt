@@ -14,15 +14,15 @@ Connect-AzureAd -TenantDomain "mystartinnovations.onmicrosoft.com"
 
 $Secure = Read-Host -AsSecureString
 
-./Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "davidfhirservice" -UsePaaS $false -AdminPassword $(ConvertTo-SecureString "$Pass149" -AsPlainText -Force )
+./Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "chenfhir" -UsePaaS $false -AdminPassword $(ConvertTo-SecureString "$Pass149" -AsPlainText -Force )
 
 
-./Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "davidfhirservice" -UsePaaS $false -AdminPassword $Secure
+./Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "chenfhir" -UsePaaS $false -AdminPassword $Secure
 
-.\Delete-FhirServerSamplesEnvironment.ps1 -EnvironmentName "davidfhirservice"
+.\Delete-FhirServerSamplesEnvironment.ps1 -EnvironmentName "chenfhir"
 
 
-.\Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "davidfhirservice" -UsePaaS $false
+.\Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "chenfhir" -UsePaaS $false
 
 
 
