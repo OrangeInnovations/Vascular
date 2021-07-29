@@ -14,9 +14,26 @@ Connect-AzureAd -TenantDomain "mystartinnovations.onmicrosoft.com"
 
 $Secure = Read-Host -AsSecureString
 
-./Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "myfhir-dev" -UsePaaS $false -AdminPassword $(ConvertTo-SecureString "$Pass149" -AsPlainText -Force )
+./Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "davidfhirservice" -UsePaaS $false -AdminPassword $(ConvertTo-SecureString "$Pass149" -AsPlainText -Force )
 
 
-./Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "myfhir-dev" -UsePaaS $false -AdminPassword $Secure
+./Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "davidfhirservice" -UsePaaS $false -AdminPassword $Secure
 
-.\Delete-FhirServerSamplesEnvironment.ps1 -EnvironmentName "myfhir-dev"
+.\Delete-FhirServerSamplesEnvironment.ps1 -EnvironmentName "davidfhirservice"
+
+
+.\Create-FhirServerSamplesEnvironment.ps1 -EnvironmentName "davidfhirservice" -UsePaaS $false
+
+
+
+Import-Module .\samples\scripts\PowerShell\FhirServer\FhirServer.psd1
+
+$fhirServiceName = "chenfhir"
+$apiAppReg = New-FhirServerApiApplicationRegistration -FhirServiceName $fhirServiceName -AppRoles globalAdmin
+
+$clientAppReg = New-FhirServerClientApplicationRegistration -ApiAppId $apiAppReg.AppId -DisplayName "myfhirclient" -ReplyUrl "https://www.getpostman.com/oauth2/callback"
+
+Set-FhirServerClientAppRoleAssignments -AppId $clientAppReg.AppId -ApiAppId $apiAppReg.AppId -AppRoles globalAdmin
+Set-FhirServerUserAppRoleAssignments -UserPrincipalName xchen178_hotmail.com#EXT#@mystartinnovations.onmicrosoft.com -ApiAppId $apiAppReg.AppId -AppRoles globalAdmin
+
+
