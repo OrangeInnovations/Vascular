@@ -37,3 +37,6 @@ Set-FhirServerClientAppRoleAssignments -AppId $clientAppReg.AppId -ApiAppId $api
 Set-FhirServerUserAppRoleAssignments -UserPrincipalName xchen178_hotmail.com#EXT#@mystartinnovations.onmicrosoft.com -ApiAppId $apiAppReg.AppId -AppRoles globalAdmin
 
 
+Get-AzKeyVault -InRemovedState
+
+Remove-AzKeyVault -VaultName chenfhir-ts -InRemovedState -Location westus
